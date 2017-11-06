@@ -1,0 +1,40 @@
+CREATE TABLE users (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    firstname VARCHAR(50),
+    lastname VARCHAR(50),
+    address VARCHAR(255),
+    phonenum VARCHAR(15),
+    email VARCHAR(255) NOT NULL,
+    group_id INT UNSIGNED NOT NULL,
+    authority_id INT UNSIGNED NOT NULL,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+CREATE TABLE companies (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    company_name VARCHAR(255) NOT NULL,
+    address VARCHAR(255),
+    phonenum VARCHAR(15),
+    email VARCHAR(255) NOT NULL,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);
+
+CREATE TABLE groups (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    company_id INT UNSIGNED NOT NULL,
+    group_name VARCHAR(255) NOT NULL,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL,
+    FOREIGN KEY (company_id) REFERENCES companies(id)
+);
+
+CREATE TABLE authorities (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    authority_name VARCHAR(255) NOT NULL,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+);

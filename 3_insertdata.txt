@@ -1,0 +1,106 @@
+INSERT INTO companies (
+    company_name,
+    address,
+    phonenum,
+    email,
+    created,
+    modified
+) VALUES (
+    '管理用会社',
+    '神奈川県鎌倉市材木座５−１１−４８',
+    '080-3357-0546',
+    'm52025.xof@gmail.com',
+    now(),
+    now()
+);
+
+INSERT INTO groups (
+    group_name,
+    company_id,
+    created,
+    modified
+) VALUES (
+    '鎌倉本店',
+    1,
+    now(),
+    now()
+);
+
+
+
+# 以下４種類の権限を用意
+# superuser : スーパーユーザー
+# company manager : 各会社アカウントのマネージャー
+# group manager : ブランチごとのマネージャー
+# user : 通常ユーザー
+INSERT INTO authorities (
+    authority_name,
+    created,
+    modified
+) VALUES (
+    'superuser',
+    now(),
+    now()
+);
+
+INSERT INTO authorities (
+    authority_name,
+    created,
+    modified
+) VALUES (
+    'company manager',
+    now(),
+    now()
+);
+
+INSERT INTO authorities (
+    authority_name,
+    created,
+    modified
+) VALUES (
+    'group manager',
+    now(),
+    now()
+);
+
+INSERT INTO authorities (
+    authority_name,
+    created,
+    modified
+) VALUES (
+    'user',
+    now(),
+    now()
+);
+
+
+
+
+
+INSERT INTO users (
+    username,
+    password,
+    firstname,
+    lastname,
+    address,
+    phonenum,
+    email,
+    group_id,
+    authority_id,
+    created,
+    modified
+) VALUES (
+    'haneda0628',
+    'fox080xof',
+    '貴俊',
+    '羽田',
+    '鎌倉市材木座',
+    '080-3357-0546',
+    'm52025.xof@gmail.com',
+    1,
+    1,
+    now(),
+    now()
+);
+
+

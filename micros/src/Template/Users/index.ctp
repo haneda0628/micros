@@ -45,8 +45,8 @@
                 <td><?= h($user->address) ?></td>
                 <td><?= h($user->phonenum) ?></td>
                 <td><?= h($user->email) ?></td>
-                <td><?= $user->has('group') ? $this->Html->link($user->group->id, ['controller' => 'Groups', 'action' => 'view', $user->group->id]) : '' ?></td>
-                <td><?= $user->has('authority') ? $this->Html->link($user->authority->id, ['controller' => 'Authorities', 'action' => 'view', $user->authority->id]) : '' ?></td>
+                <td><?= $user->has('group') ? $this->Html->link($user->group->group_name, ['controller' => 'Groups', 'action' => 'view', $user->group->id]) : '' ?></td>
+                <td><?= $user->has('authority') ? $this->Html->link($user->authority->authority_name, ['controller' => 'Authorities', 'action' => 'view', $user->authority->id]) : '' ?></td>
                 <td><?= h($user->created) ?></td>
                 <td><?= h($user->modified) ?></td>
                 <td class="actions">

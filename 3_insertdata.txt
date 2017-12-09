@@ -26,6 +26,17 @@ INSERT INTO groups (
     now()
 );
 
+INSERT INTO groups (
+    group_name,
+    company_id,
+    created,
+    modified
+) VALUES (
+    '新横浜支店',
+    1,
+    now(),
+    now()
+);
 
 
 # 以下４種類の権限を用意

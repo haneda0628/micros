@@ -6,3 +6,7 @@
 
 #データベース名
  micros
+
+CREATE USER micros_admin IDENTIFIED BY '1234567890';
+CREATE DATABASE micros;
+GRANT ALL PRIVILEGES ON micros.* TO 'micros_admin' identified by '1234567890' ;

@@ -102,7 +102,7 @@ INSERT INTO users (
     modified
 ) VALUES (
     'haneda0628',
-    'fox080xof',
+    '$2y$10$CAoWizsjosre1SnaVr1heeIQ3FELHrYLBXbwh5WufwwDIpPHIxiZe', #fox080xof
     '貴俊',
     '羽田',
     '鎌倉市材木座',
